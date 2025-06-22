@@ -1,7 +1,159 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резюме Михаила Бекусова</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .section-toggle { cursor: pointer; }
+    .section-content { display: none; }
+    .section-content.active { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-8 p-6 text-center">
+      <h1 class="text-2 font-bold text-4xl text-blue-900 dark:text-white">Михаил Бекусов</h1>
+      <p class="text-xl text-gray-600">DL, CV, Prompt Engineer</p>
+      <div class="mt-4 flex justify-center space-x-4 flex-wrap">
+        <p class="text-blue-600"><a href="tel:+79087669735">+7 (908) 766-9735</a></p>
+        <p class="text-blue-600"><a href="mailto:mbekusov@bk.ru">mbekusov@bk.ru</a></p>
+        <p class="text-blue-600"><a href="https://t.me/mike_bekusov" target="_blank">Telegram</a></p>
+        <p class="text-blue-600"><a href="https://github.com/BekusovMikhail" target="_blank">GitHub</a></p>
+      </div>
+      <p class="mt-2 text-gray-600">Нижний Новгород, м. Горьковская | Гражданство: Россия</p>
+    </header>
+
+    <!-- Summary -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Обо мне</h2>
+      <p class="text-gray-700 dark:text-gray-300">
+        Студент 2-го курса магистратуры Университета ИТМО по направлению «Искусственный интеллект». Увлечён созданием ИИ-решений для реальных задач. Активно занимаюсь спортом (тренажёрный зал, бег), вожу автомобиль (права категории B). Стремлюсь к профессиональному росту, изучаю новые подходы в DL, CV и Prompt Engineering.
+      </p>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">
+        <strong>Занятость:</strong> Полная, частичная | <strong>График:</strong> Полный день, гибкий, удалённая работа | <strong>Зарплата:</strong> 270 000 ₽
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Опыт работы</h2>
+      
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">AI Team Lead</h3>
+        <p class="text-gray-600 dark:text-gray-400">FrozenLight Studios, Санкт-Петербург | Февраль 2024 — настоящее время (1 год 5 месяцев)</p>
+        <p class="section-toggle text-blue-600 font-semibold mt-2">Проект "NEUROSTORY" ▼</p>
+        <div class="section-content text-gray-700 dark:text-gray-300">
+          <p>RPG-игра нового поколения с динамической генерацией контента с помощью ИИ.</p>
+          <ul class="list-disc pl-5">
+            <li>Лидерство командной разработки: координация задач и управление командой.</li>
+            <li>Исследование и внедрение технологий: интеграция LLM (GPT-4o), Midjourney v6, XTTSv2, Azgaar.</li>
+            <li>Совместно с геймдизайнерами обеспечил связность сюжетов (промпты для LLM, тестирование 3 экспертами).</li>
+            <li>ML Ops: настройка пайплайнов, развертывание серверов, prompt engineering.</li>
+            <li>Отбор метрик, определение SOTA и базовых моделей.</li>
+            <li>Спроектировал масштабируемую архитектуру для мультиплеера и генерации контента.</li>
+            <li>Участие в бизнес-стратегии и презентациях для инвесторов.</li>
+          </ul>
+        </div>
+        <p class="section-toggle text-blue-600 font-semibold mt-2">Проект "AI-SCREEN-IT" ▼</p>
+        <div class="section-content text-gray-700 dark:text-gray-300">
+          <p>Система поддержки принятия решений для онкологов.</p>
+          <ul class="list-disc pl-5">
+            <li>Разработка и обучение моделей для сегментации и классификации медицинских изображений.</li>
+            <li>Развертывание пайплайнов (CVAT, Triton Inference Server, MinIO).</li>
+            <li>Интеграция через Redmine для взаимодействия врачей и пациентов.</li>
+            <li>Автоматизация обучения моделей на новых данных.</li>
+            <li>Тестирование и доработка MVP.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Инженер-программист</h3>
+        <p class="text-gray-600 dark:text-gray-400">ООО "Фрактал", Нижний Новгород | Февраль 2023 — Февраль 2024 (1 год 1 месяц)</p>
+        <p class="section-toggle text-blue-600 font-semibold mt-2">Подробности ▼</p>
+        <div class="section-content text-gray-700 dark:text-gray-300">
+          <p>Разработка комплексов фото- и видеофиксации нарушений ПДД.</p>
+          <ul class="list-disc pl-5">
+            <li>Обучение CV-моделей для обнаружения транспортных средств.</li>
+            <li>Работа с пайплайном нейросетей (preprocessing, NMS).</li>
+            <li>Конвертация моделей из .pth в .trt с изменением графа сети.</li>
+            <li>Создание компонента для детектирования водителя.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Образование</h2>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Магистр, Искусственный Интеллект</h3>
+        <p class="text-gray-600 dark:text-gray-400">Ленинградский институт точной механики и оптики (ИТМО), Санкт-Петербург | 2023 — 2025</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Бакалавр, Программная Инженерия</h3>
+        <p class="text-gray-600 dark:text-gray-400">Филиал НИУ ВШЭ, Нижний Новгород | 2019 — 2023</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Проекты</h2>
+      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+        <li><a href="https://github.com/adanyaev/students_data" target="_blank" class="text-blue-600">Визуализация данных студентов</a> (Python, 1 курс).</li>
+        <li><a href="https://github.com/BekusovMikhail/coursework2020-2021" target="_blank" class="text-blue-600">Сравнение архитектур для генерации текста</a> (LSTM, Markov Chains, 2 курс).</li>
+        <li><a href="https://github.com/BekusovMikhail/medical-app" target="_blank" class="text-blue-600">Сервис координации лечения</a> (Django, фронтенд/бэкенд, 3 курс).</li>
+        <li>VKR: Подсчёт и оценка веса свиней с помощью CV (TRT, Tracker, 4 курс).</li>
+        <li><a href="https://github.com/BekusovMikhail" target="_blank" class="text-blue-600">Умный холодильник</a> (CV, детекция объектов, 2022).</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Навыки</h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">PyTorch</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Deep Learning</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">NLP</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Docker</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Git</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Linux</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">FastAPI</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">PostgreSQL</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Triton Inference Server</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">CVAT</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-2.5 py-0.5 rounded">Team Collaboration</span>
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-200 text-sm font-medium px-25 py-0.5 rounded">Project Management</span>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2 font-semibold mb-4 text-blue-900 dark:text-white">Знание языков</h2>
+      <p class="text-gray-700 dark:text-gray-300">Русский: Родной | Английский: B2 (средне-продвинутый)</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-600 dark:text-gray-400 py-4">
+      <p>Резюме обновлено: 23 июня 2025 года</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.section-toggle').forEach(toggle => {
+      toggleEl.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.classList.toggle('active');
+        toggle.textContent = content.classList.contains('active') ? toggle.textContent.replace('▼', '▲') : toggle.textContent.replace('▲', '▼');
+      });
+    });
+  </script>
 </body>
 </html>

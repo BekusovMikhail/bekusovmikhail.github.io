@@ -3,95 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Резюме Михаила Бекусова</title>
+  <title>Резюме Михаила Бекусова | ML Engineer / AI Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
     .section-toggle { cursor: pointer; }
-    /* .section-content { display: none; } */
-    /* .section-content.active { display: block; } */
     .section-content {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
     .section-content.active {
-      max-height: 1000px; /* Укажите достаточно большой max-height */
+      max-height: 5000px;
     }
+    .skill-badge { transition: transform 0.2s ease; }
+    .skill-badge:hover { transform: translateY(-2px); }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <div class="container mx-auto px-4 py-8 max-w-4xl">
+  <div class="container mx-auto px-4 py-8 max-w-6xl">
     <!-- Header -->
-    <header class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-8 p-6 text-center">
-      <h1 class="text-2 font-bold text-4xl text-blue-900 dark:text-white">Михаил Бекусов</h1>
-      <p class="text-xl text-gray-600">DL, CV, Prompt Engineer</p>
-      <div class="mt-4 flex justify-center space-x-4 flex-wrap">
-        <p class="text-blue-600"><a href="tel:+79087669735">+7 (908) 766-9735</a></p>
-        <p class="text-blue-600"><a href="mailto:mbekusov@bk.ru">mbekusov@bk.ru</a></p>
-        <p class="text-blue-600"><a href="https://t.me/mike_bekusov" target="_blank">Telegram</a></p>
-        <p class="text-blue-600"><a href="https://github.com/BekusovMikhail" target="_blank">GitHub</a></p>
+    <header class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-8 p-6">
+      <div class="text-center">
+        <h1 class="text-2 font-bold text-4xl text-blue-900 dark:text-white">Михаил Бекусов</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">ML Engineer / AI Engineer с фокусом на LLM (RAG, агенты) и Computer Vision</p>
+        <p class="text-lg text-gray-600 dark:text-gray-300">Startup Tech Lead</p>
       </div>
-      <p class="mt-2 text-gray-600">Нижний Новгород, м. Горьковская | Гражданство: Россия</p>
+      
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left">
+        <div>
+          <p class="text-gray-700 dark:text-gray-300"><strong>Контакты:</strong></p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-1">
+            <a href="tel:+79087669735" class="text-blue-600 hover:text-blue-800">+7 (908) 766-9735</a>
+            <a href="mailto:mbekusov@bk.ru" class="text-blue-600 hover:text-blue-800">mbekusov@bk.ru</a>
+            <a href="https://t.me/mike_bekusov" target="_blank" class="text-blue-600 hover:text-blue-800">Telegram</a>
+            <a href="https://github.com/BekusovMikhail" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub</a>
+            <a href="https://bekusovmikhail.github.io/" target="_blank" class="text-blue-600 hover:text-blue-800">Портфолио</a>
+          </div>
+        </div>
+        
+        <div>
+          <p class="text-gray-700 dark:text-gray-300"><strong>Локация:</strong> Нижний Новгород, м. Горьковская</p>
+          <p class="text-gray-700 dark:text-gray-300"><strong>Гражданство:</strong> Россия, есть разрешение на работу</p>
+          <p class="text-gray-700 dark:text-gray-300"><strong>Готовность:</strong> Не готов к переезду и командировкам</p>
+        </div>
+      </div>
+      
+      <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+        <p class="text-gray-700 dark:text-gray-300 text-center">
+          <strong>Занятость:</strong> полная, частичная, проектная | 
+          <strong>График:</strong> полный день | 
+          <strong>Зарплата:</strong> по договоренности
+        </p>
+      </div>
     </header>
-
-    <!-- Summary -->
-    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Обо мне</h2>
-      <p class="text-gray-700 dark:text-gray-300">
-        Студент 2-го курса магистратуры Университета ИТМО по направлению «Искусственный интеллект». Увлечён созданием ИИ-решений для реальных задач. Активно занимаюсь спортом (тренажёрный зал, бег), вожу автомобиль (права категории B). Стремлюсь к профессиональному росту, изучаю новые подходы в DL, CV и Prompt Engineering.
-      </p>
-      <p class="mt-2 text-gray-700 dark:text-gray-300">
-        <strong>Занятость:</strong> Полная, частичная | <strong>График:</strong> Полный день, гибкий, удалённая работа | <strong>Зарплата:</strong> 270 000 ₽
-      </p>
-    </section>
 
     <!-- Experience -->
     <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Опыт работы</h2>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Опыт работы — 2 года 11 месяцев</h2>
       
-      <div class="mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">AI Team Lead</h3>
-        <p class="text-gray-600 dark:text-gray-400">FrozenLight Studios, Санкт-Петербург | Февраль 2024 — настоящее время (1 год 5 месяцев)</p>
-        <p class="section-toggle text-blue-600 font-semibold mt-2">Проект "NEUROSTORY" ▼</p>
-        <div class="section-content text-gray-700 dark:text-gray-300">
-          <p>RPG-игра нового поколения с динамической генерацией контента с помощью ИИ.</p>
-          <ul class="list-disc pl-5">
-            <li>Лидерство командной разработки: координация задач и управление командой.</li>
-            <li>Исследование и внедрение технологий: интеграция LLM (GPT-4o), Midjourney v6, XTTSv2, Azgaar.</li>
-            <li>Совместно с геймдизайнерами обеспечил связность сюжетов (промпты для LLM, тестирование 3 экспертами).</li>
-            <li>ML Ops: настройка пайплайнов, развертывание серверов, prompt engineering.</li>
-            <li>Отбор метрик, определение SOTA и базовых моделей.</li>
-            <li>Спроектировал масштабируемую архитектуру для мультиплеера и генерации контента.</li>
-            <li>Участие в бизнес-стратегии и презентациях для инвесторов.</li>
-          </ul>
+      <!-- Flocktory -->
+      <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">AI/ML Engineer</h3>
+            <p class="text-lg text-gray-700 dark:text-gray-300">Flocktory</p>
+            <p class="text-gray-600 dark:text-gray-400">Москва (удаленно) | Сентябрь 2025 — настоящее время (4 месяца)</p>
+          </div>
+          <span class="mt-2 md:mt-0 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold rounded-full">Информационные технологии</span>
         </div>
-        <p class="section-toggle text-blue-600 font-semibold mt-2">Проект "AI-SCREEN-IT" ▼</p>
-        <div class="section-content text-gray-700 dark:text-gray-300">
-          <p>Система поддержки принятия решений для онкологов.</p>
-          <ul class="list-disc pl-5">
-            <li>Разработка и обучение моделей для сегментации и классификации медицинских изображений.</li>
-            <li>Развертывание пайплайнов (CVAT, Triton Inference Server, MinIO).</li>
-            <li>Интеграция через Redmine для взаимодействия врачей и пациентов.</li>
-            <li>Автоматизация обучения моделей на новых данных.</li>
-            <li>Тестирование и доработка MVP.</li>
-          </ul>
+        
+        <div class="mt-4">
+          <p class="text-gray-700 dark:text-gray-300 mb-3">Разработка корпоративного LLM-ассистента на основе RAG для автоматизации работы с документацией.</p>
+          
+          <p class="section-toggle text-blue-600 font-semibold mt-2 cursor-pointer hover:text-blue-800">Детали проекта ▼</p>
+          <div class="section-content text-gray-700 dark:text-gray-300">
+            <ul class="list-disc pl-5 mt-2 space-y-2">
+              <li><strong>Архитектура и реализация:</strong> Спроектировал и реализовал с нуля end-to-end RAG-пайплайн: выгрузка данных (Atlassian, Google Workspace APIs), чанкинг, векторизация, семантический поиск, генерация ответов и Tool Calling.</li>
+              <li><strong>Оптимизация качества:</strong> Провел цикл экспериментов (размер чанков, модели эмбеддингов), что повысило точность поиска релевантного контекста более чем на 40%. Внедрил систему реранкинга с учетом актуальности данных.</li>
+              <li><strong>Разработка агента:</strong> Создал LLM-агента с 40+ инструментами (Jira, Confluence, поиск) для автоматизации рутинных задач пользователей (создание задач, поиск, анализ).</li>
+              <li><strong>Production-развертывание:</strong> Обеспечил масштабируемость и отказоустойчивость: асинхронная обработка, стресс-тестирование (100+ RPS), настройка Nginx, Docker-оркестрация. Frontend + интеграция бота в Mattermost.</li>
+            </ul>
+            
+            <div class="mt-4">
+              <p class="font-semibold">Стек технологий:</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">LangChain</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">ChromaDB</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Hugging Face</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">FastAPI</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Django</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Docker</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Redis</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Nginx</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">PostgreSQL</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">DeepSeek API</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Gemini API</span>
+                <span class="skill-badge bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Atlassian REST API</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Инженер-программист</h3>
-        <p class="text-gray-600 dark:text-gray-400">ООО "Фрактал", Нижний Новгород | Февраль 2023 — Февраль 2024 (1 год 1 месяц)</p>
-        <p class="section-toggle text-blue-600 font-semibold mt-2">Подробности ▼</p>
-        <div class="section-content text-gray-700 dark:text-gray-300">
-          <p>Разработка комплексов фото- и видеофиксации нарушений ПДД.</p>
-          <ul class="list-disc pl-5">
-            <li>Обучение CV-моделей для обнаружения транспортных средств.</li>
-            <li>Работа с пайплайном нейросетей (preprocessing, NMS).</li>
-            <li>Конвертация моделей из .pth в .trt с изменением графа сети.</li>
-            <li>Создание компонента для детектирования водителя.</li>
-          </ul>
+      <!-- FrozenLight Studios -->
+      <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">AI Team Lead / Fullstack AI Engineer</h3>
+            <p class="text-lg text-gray-700 dark:text-gray-300">FrozenLight Studios</p>
+            <p class="text-gray-600 dark:text-gray-400">Санкт-Петербург (удаленно) | Февраль 2024 — Август 2025 (1 год 7 месяцев)</p>
+          </div>
+          <span class="mt-2 md:mt-0 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold rounded-full">Разработка ПО</span>
+        </div>
+        
+        <!-- NEUROSTORY Project -->
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Проект: NEUROSTORY (Февраль 2024 – Август 2025, 1 год 6 месяцев)</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-3">Руководство разработкой AI-движка для генеративной RPG.</p>
+          
+          <p class="section-toggle text-blue-600 font-semibold mt-2 cursor-pointer hover:text-blue-800">Детали проекта ▼</p>
+          <div class="section-content text-gray-700 dark:text-gray-300">
+            <ul class="list-disc pl-5 mt-2 space-y-2">
+              <li><strong>Управление и архитектура:</strong> Руководил кросс-функциональной командой из 5 специалистов (геймдизайн, фронтенд, ML). С нуля спроектировал и внедрил архитектуру для динамической генерации контента (нарратив, изображения, озвучка) с использованием LLM (Gemini, ChatGPT) и мультимодальных моделей (Midjourney, XTTSv2).</li>
+              <li><strong>Prompt Engineering & Quality:</strong> Разработал систему промитов и валидации для LLM, что позволило добиться высокого уровня связности и креативности генерируемых сюжетов. Применил продвинутые техники (moodboarding) для стабильного качества изображений.</li>
+              <li><strong>Роль Fullstack ML:</strong> Лично занимался интеграцией всех AI-API, оптимизацией backend для работы с генеративными моделями и созданием прототипов интерфейсов.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- AI-SCREEN-IT Project -->
+        <div class="mt-6">
+          <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Проект: AI-SCREEN-IT</h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-3">Разработка системы поддержки принятия решений для онкологов на основе анализа МРТ-снимков.</p>
+          
+          <p class="section-toggle text-blue-600 font-semibold mt-2 cursor-pointer hover:text-blue-800">Детали проекта ▼</p>
+          <div class="section-content text-gray-700 dark:text-gray-300">
+            <ul class="list-disc pl-5 mt-2 space-y-2">
+              <li><strong>Разработка моделей:</strong> Обучил и внедрил ансамбль моделей (EfficientNetV2, SegNeXt) для классификации и сегментации опухолей головного мозга. Достигнуты метрики: Accuracy 85%, Dice-score 87.21%.</li>
+              <li><strong>Внедрение и автоматизация:</strong> Разработал и настроил MLOps-пайплайн (CVAT, Triton Inference Server, MinIO), что сократило время от разметки данных до деплов обновленной модели в 4 раза.</li>
+              <li><strong>Клинический результат:</strong> Созданный модуль сократил время предварительного анализа одного исследования с 30 до 5 минут.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Фрактал -->
+      <div class="mb-8">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Инженер-программист (Computer Vision)</h3>
+            <p class="text-lg text-gray-700 dark:text-gray-300">ООО "Фрактал"</p>
+            <p class="text-gray-600 dark:text-gray-400">Нижний Новгород | Указанный период в резюме</p>
+          </div>
+          <span class="mt-2 md:mt-0 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold rounded-full">ИТ и интеграция</span>
+        </div>
+        
+        <div class="mt-4">
+          <p class="text-gray-700 dark:text-gray-300 mb-3">Разработка и оптимизация компонентов систем фотовидеофиксации.</p>
+          
+          <p class="section-toggle text-blue-600 font-semibold mt-2 cursor-pointer hover:text-blue-800">Детали проекта ▼</p>
+          <div class="section-content text-gray-700 dark:text-gray-300">
+            <ul class="list-disc pl-5 mt-2 space-y-2">
+              <li><strong>Разработка с нуля:</strong> Создал модуль детекции факта нахождения водителя в транспортном средстве, достигнув высоких показателей точности (Precision ~98%).</li>
+              <li><strong>Оптимизация для edge:</strong> Перевел модели детекции и классификации с PyTorch на TensorRT, добившись скорости инференса ~10 мс на целевом оборудовании при сохранении качества детекции.</li>
+              <li><strong>Работа с пайплайном:</strong> Участвовал в улучшении этапов препроцессинга и постпроцессинга (NMS) для повышения итоговой точности пайплайна.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -99,81 +179,170 @@
     <!-- Education -->
     <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
       <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Образование</h2>
-      <div class="mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Магистр, Искусственный Интеллект</h3>
-        <p class="text-gray-600 dark:text-gray-400">Ленинградский институт точной механики и оптики (ИТМО), Санкт-Петербург | 2023 — 2025</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Магистр</h3>
+              <p class="text-gray-700 dark:text-gray-300">Искусственный Интеллект</p>
+              <p class="text-gray-600 dark:text-gray-400">Ленинградский институт точной механики и оптики (ИТМО)</p>
+              <p class="text-gray-500 dark:text-gray-400">Санкт-Петербург</p>
+            </div>
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-semibold rounded-full">2025</span>
+          </div>
+        </div>
+        
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Бакалавр</h3>
+              <p class="text-gray-700 dark:text-gray-300">Программная Инженерия</p>
+              <p class="text-gray-600 dark:text-gray-400">Филиал НИУ ВШЭ</p>
+              <p class="text-gray-500 dark:text-gray-400">Нижний Новгород</p>
+            </div>
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-semibold rounded-full">2023</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Бакалавр, Программная Инженерия</h3>
-        <p class="text-gray-600 dark:text-gray-400">Филиал НИУ ВШЭ, Нижний Новгород | 2019 — 2023</p>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
-      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Проекты</h2>
-      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-        <li><a href="https://github.com/adanyaev/students_data" target="_blank" class="text-blue-600">Визуализация данных студентов</a> (Python, 1 курс).</li>
-        <li><a href="https://github.com/BekusovMikhail/coursework2020-2021" target="_blank" class="text-blue-600">Сравнение архитектур для генерации текста</a> (LSTM, Markov Chains, 2 курс).</li>
-        <li><a href="https://github.com/BekusovMikhail/medical-app" target="_blank" class="text-blue-600">Сервис координации лечения</a> (Django, фронтенд/бэкенд, 3 курс).</li>
-        <li>VKR: Подсчёт и оценка веса свиней с помощью CV (TRT, Tracker, 4 курс).</li>
-        <li>Умный холодильник (CV, детекция объектов, 2022).</li>
-      </ul>
     </section>
 
     <!-- Skills -->
     <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
       <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Навыки</h2>
-      <div class="flex flex-wrap gap-2">
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Git</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Linux</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Machine Learning</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">PyTorch</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Docker</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">pandas</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Deep Learning</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">ML</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Numpy</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">DL</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Classification</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">OpenCV</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">SQL</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">TensorRT</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Team Collaboration</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">FastAPI</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">PostgreSQL</span>
-        <span class="bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">CVAT</span>
-        <span class="bg-blue-400 dark:bg-blue-500 text-white text-sm font-medium px-2.5 py-0.5 rounded">NLP</span>
-        <span class="bg-blue-400 dark:bg-blue-500 text-white text-sm font-medium px-2.5 py-0.5 rounded">DevOps</span>
-        <span class="bg-blue-400 dark:bg-blue-500 text-white text-sm font-medium px-2.5 py-0.5 rounded">Triton Inference Server</span>
-        <span class="bg-blue-200 dark:bg-blue-300 text-white text-sm font-medium px-2.5 py-0.5 rounded">UI/UX</span>
-        <span class="bg-blue-200 dark:bg-blue-300 text-white text-sm font-medium px-2.5 py-0.5 rounded">Project Management</span>
-        <span class="bg-blue-200 dark:bg-blue-300 text-white text-sm font-medium px-2.5 py-0.5 rounded">Public Speaking</span>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Технические навыки</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">PyTorch</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">TensorRT</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">Machine Learning</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">Deep Learning</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">Computer Vision</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">LLM</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">RAG</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">LangChain</span>
+          <span class="skill-badge bg-blue-700 dark:bg-blue-800 text-white text-sm font-medium px-2.5 py-0.5 rounded">Prompt Engineering</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Git</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Docker</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">FastAPI</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Django</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">PostgreSQL</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Redis</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Nginx</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Linux</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Hugging Face</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">OpenCV</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Numpy</span>
+          <span class="skill-badge bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">pandas</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Scikit-learn</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">SQL</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Triton Inference Server</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">CVAT</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">DevOps</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Jupyter Notebook</span>
+          <span class="skill-badge bg-blue-500 dark:bg-blue-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">REST API</span>
+        </div>
       </div>
-  </section>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Профессиональные навыки</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-badge bg-green-600 dark:bg-green-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Team Leadership</span>
+          <span class="skill-badge bg-green-600 dark:bg-green-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Project Management</span>
+          <span class="skill-badge bg-green-600 dark:bg-green-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">Team Collaboration</span>
+          <span class="skill-badge bg-green-600 dark:bg-green-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">MLOps</span>
+          <span class="skill-badge bg-green-600 dark:bg-green-700 text-white text-sm font-medium px-2.5 py-0.5 rounded">System Architecture</span>
+          <span class="skill-badge bg-green-500 dark:bg-green-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Problem Solving</span>
+          <span class="skill-badge bg-green-500 dark:bg-green-600 text-white text-sm font-medium px-2.5 py-0.5 rounded">Research & Development</span>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">Языки</h3>
+        <div class="flex flex-wrap gap-4">
+          <div class="flex items-center">
+            <span class="font-semibold text-gray-700 dark:text-gray-300">Русский:</span>
+            <span class="ml-2 text-gray-600 dark:text-gray-400">Родной</span>
+          </div>
+          <div class="flex items-center">
+            <span class="font-semibold text-gray-700 dark:text-gray-300">Английский:</span>
+            <span class="ml-2 text-gray-600 dark:text-gray-400">B2 (Средне-продвинутый)</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Languages -->
+    <!-- Projects -->
     <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
-      <h2 class="text-2 font-semibold mb-4 text-blue-900 dark:text-white">Знание языков</h2>
-      <p class="text-gray-700 dark:text-gray-300">Русский: Родной | Английский: B2 (средне-продвинутый)</p>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">Учебные проекты и дипломные работы</h2>
+      
+      <div class="space-y-4">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">ВКР бакалавриата: Система подсчёта и оценки веса свиней по видео</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-2">Полноценный продукт с вычислительной серверной частью, веб-приложением и БД для подсчета свиней и оценки их веса.</p>
+          <ul class="list-disc pl-5 text-gray-600 dark:text-gray-400">
+            <li>Разметка данных и обучение нейросетевых моделей</li>
+            <li>Интеграция алгоритма трекинга (Tracker) для идентификации свиней между кадрами</li>
+            <li>Два подхода для оценки веса: эвристический и с использованием референсного объекта</li>
+            <li>Конвертация моделей в формат TensorRT (TRT)</li>
+          </ul>
+        </div>
+        
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Умный холодильник (2022)</h3>
+          <p class="text-gray-700 dark:text-gray-300">Детекция продуктов, заносимых и выносимых из холодильника, посредством детекции руки и объектов в ней.</p>
+        </div>
+        
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Курсовые работы</h3>
+          <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+            <li><a href="https://github.com/adanyaev/students_data" target="_blank" class="text-blue-600 hover:text-blue-800">Приложение для визуализации данных о студентах (Python, 1 курс)</a></li>
+            <li><a href="https://github.com/BekusovMikhail/coursework2020-2021" target="_blank" class="text-blue-600 hover:text-blue-800">Сравнение архитектур нейронных сетей для генерации текста (LSTM, марковские цепи, 2 курс)</a></li>
+            <li><a href="https://github.com/BekusovMikhail/medical-app" target="_blank" class="text-blue-600 hover:text-blue-800">Сервис координации лечения пациента (Django, фронтенд/бэкенд, БД, 3 курс)</a></li>
+          </ul>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Больше проектов по DL и CV: <a href="https://github.com/BekusovMikhail" target="_blank" class="text-blue-600 hover:text-blue-800">https://github.com/BekusovMikhail</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg mb-6 p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-900 dark:text-white">О себе</h2>
+      <div class="space-y-4 text-gray-700 dark:text-gray-300">
+        <p>Магистр ИТМО по направлению «Искусственный интеллект», увлечён созданием ИИ-решений для реальных задач.</p>
+        <p>Активно занимаюсь спортом (тренажёрный зал, бег), что помогает поддерживать баланс и продуктивность.</p>
+        <p>Вожу автомобиль (права категории В).</p>
+        <p>Английский: Upper-Intermediate (B2). Свободное чтение технической документации, ведение переписки.</p>
+        <p>Стремлюсь к профессиональному росту, изучаю новые подходы в DL, CV и Prompt Engineering.</p>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center text-gray-600 dark:text-gray-400 py-4">
-      <p>Резюме обновлено: 23 июня 2025 года</p>
+      <p>Резюме обновлено: 25 декабря 2025 года в 17:11</p>
     </footer>
   </div>
 
   <script>
-  document.querySelectorAll('.section-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.nextElementSibling;
-      content.classList.toggle('active');
-      toggle.textContent = content.classList.contains('active') ? toggle.textContent.replace('▼', '▲') : toggle.textContent.replace('▲', '▼');
+    document.querySelectorAll('.section-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.classList.toggle('active');
+        toggle.textContent = content.classList.contains('active') 
+          ? toggle.textContent.replace('▼', '▲') 
+          : toggle.textContent.replace('▲', '▼');
+      });
     });
-  });
-</script>
+
+    // Открываем первый проект в опыте работы по умолчанию
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstToggle = document.querySelector('.section-toggle');
+      if (firstToggle) {
+        firstToggle.click();
+      }
+    });
+  </script>
 </body>
 </html>
